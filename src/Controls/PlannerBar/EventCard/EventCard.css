@@ -1,0 +1,29 @@
+.EventCard {
+    background-color: #f0eeee;
+    height: 10%;
+    z-index: 8;
+    top: 60%;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 15px;
+    border-color:  rgb(184, 184, 184) ;
+    position: absolute;
+    box-shadow: 0px 0px 1px 1px #cccccc;
+    overflow: hidden;
+    perspective: 1px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.EventTypeIndicator {
+    margin-left: 4px;
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    background-color: crimson;
+}
+
+.EventCardTitle {
+    margin-left: 8px;
+}

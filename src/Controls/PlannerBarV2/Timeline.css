@@ -1,0 +1,93 @@
+.Timeline {
+    width: 100%;
+    height: 500px;
+    outline: 1px solid rgb(211, 211, 211);
+    white-space: nowrap;
+}
+
+.Timeline-Sidebar {
+    height: 100%;
+    z-index: 1;
+    width: 100px;
+    transition: 0.5s;
+    background-color: #e2e2e2;
+    display: inline-block;
+}
+
+.Timeline-MainBody {
+    width: 100%;
+    display: inline-block;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+.Timeline-Header {
+    width: 100%;
+    height: 10%;
+}
+
+.Timeline-HeaderText {
+    float:left;
+    font-size: 30px;
+    padding-left: 10px;
+}
+
+.Timeline-Header button {
+    float:left;
+}
+
+.Timeline-Markers {
+    height: 10%;
+    width: 100%;
+    white-space: nowrap;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.Timelineblock-LeadSpacer {
+    width: 40px;
+    height: 400px;
+    display: inline-block;
+    outline: 1px solid rgb(211, 211, 211);
+    background-color: rgb(238, 238, 238);
+}
+
+.Timelineblock-EndSpacer {
+    width: 40px;
+    height: 400px;
+    display: inline-block;
+    outline: 1px solid rgb(211, 211, 211);
+    background-color: rgb(238, 238, 238);
+}
+
+.Timeline-Blocks {
+    width: 100%;
+    white-space: nowrap;
+}
+
+.TimelineFullContainer {
+    width: 100%;
+    overflow-y:auto;
+}
+
+.Timeline-Marker {
+    height: 100%;
+    width: 80px;
+    display: inline-block;
+    text-align: center; 
+    font-family: 'Rubik', sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgb(211, 211, 211);
+}
+
+::-webkit-scrollbar-thumb {
+    background:rgb(107, 107, 107);
+    border-radius: 3px;
+}

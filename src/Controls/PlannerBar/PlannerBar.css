@@ -1,0 +1,50 @@
+.PlannerBar {
+    width:90%;
+    height:210px;
+    position:relative;
+    border-style: solid;
+    border-color: rgb(184, 184, 184);
+    border-width: 2px;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-shadow: 0px 0px 1px 1px #cccccc;
+}
+
+.PlannerDate {
+    height: 10%;
+}
+
+.TimeMarkers {
+    width: 100%;
+    height: 10%;
+    display:flex;
+    flex-direction: row;
+}
+
+.TimeGrid {
+    width: 100%;
+    height: 71%;
+    display:flex;
+    flex-direction: row;
+    background-color: #f0eeee;
+}
+
+.TimeGridSlot {
+    width: 4.16%;
+    height: 100%;
+    border-style: solid;
+    border-color: rgb(184, 184, 184);
+    border-width: 1px;
+    border-bottom: 0px;
+}
+
+.PlannerHour {
+    width: 4.16%;
+    height: 10%;
+    font-size: 4px;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0);
+    border-width: 1px;
+}
+
