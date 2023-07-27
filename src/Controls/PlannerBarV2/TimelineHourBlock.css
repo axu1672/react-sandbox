@@ -1,7 +1,16 @@
 .TimelineHourBlock {
-    display: inline-block;
     height: 400px;
     width: 80px;
     outline: 1px solid rgb(211, 211, 211);
-    background-color: rgb(238, 238, 238);
+    background-color: rgb(243, 243, 243);
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.TimelineHourBlock-Row {
+    height: 40px;
+    width: 100%;
+    outline: 1px solid rgb(236, 236, 236);
+    flex-shrink: 0;
 }

@@ -61,7 +61,8 @@ function TimelineSideBar(props) {
 
     return (
         <div className='Timeline-Sidebar' style={{width: props.width}}>
-
+            <div className='Timeline-Sidebar-Header'></div>
+            <div className='Timeline-Sidebar-Body'></div>
         </div>
     );
 }
@@ -77,7 +78,14 @@ function TimelineBlockContainer(props) {
 
     let TimelineBlocks = [];
 
-    TimelineBlocks.push(<div className='Timelineblock-LeadSpacer'></div>);
+    let rows = [];
+    for (let i = 0 ; i < 10 ; i ++) {
+        rows.push(
+            <div className='TimelineSpacerBlock-Row' key={"Block-" + i}></div>
+        );
+    }
+
+    TimelineBlocks.push(<div className='Timelineblock-LeadSpacer'>{rows}</div>);
     const refs = React.createRef();
 
     let tempBounds = {};
@@ -98,7 +106,7 @@ function TimelineBlockContainer(props) {
 
     props.onload(tempBounds);
   
-    TimelineBlocks.push(<div className='Timelineblock-EndSpacer'></div>);
+    TimelineBlocks.push(<div className='Timelineblock-EndSpacer'>{rows}</div>);
 
     return (
         <div className='Timeline-Blocks'>
@@ -145,8 +153,8 @@ function TimelineHeader(props) {
 
     return (
         <div className='Timeline-Header'>
-            <div className='Timeline-HeaderText'>Today</div>
             <button onClick={OnClickExpand}>{expandButtonState}</button>
+            <div className='Timeline-HeaderText'>Today</div>
         </div>
     );
 }
