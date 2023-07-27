@@ -1,7 +1,7 @@
 .TimelineHourBlock {
-    display: inline-block;
     height: 400px;
     width: 80px;
     outline: 1px solid rgb(211, 211, 211);
     background-color: rgb(238, 238, 238);
+    flex-shrink: 0;
 }
