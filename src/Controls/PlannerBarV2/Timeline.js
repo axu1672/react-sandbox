@@ -43,6 +43,15 @@ function Timeline(props) {
         }
     }
 
+
+    let currentDateTime = TimelineUtils.GetCurrentTime();
+    let pointer = <div className="TimelinePointer"
+        style={{left: currentDateTime.Position + "px",
+            top: "0px"
+        }}
+    >
+    </div>
+
     return (
         <div className='Timeline'>
             <TimelineSideBar width={sidebarWidth.sidebarWidth}/>
@@ -51,6 +60,7 @@ function Timeline(props) {
                 <div className='TimelineFullContainer'>
                     <TimelineHourMarkerBar/>
                     <TimelineBlockContainer onload={GetBlockBounds}/>
+                    {pointer}
                 </div>
             </div>
         </div>
@@ -59,10 +69,17 @@ function Timeline(props) {
 
 function TimelineSideBar(props) {
 
+    let rows = [];
+    for (let i = 0 ; i < 10 ; i ++) {
+        rows.push(
+            <div className='TimelineSidebarSlot' key={"Slot-" + i}></div>
+        );
+    }
+
     return (
         <div className='Timeline-Sidebar' style={{width: props.width}}>
             <div className='Timeline-Sidebar-Header'></div>
-            <div className='Timeline-Sidebar-Body'></div>
+            <div className='Timeline-Sidebar-Body'>{rows}</div>
         </div>
     );
 }
@@ -71,9 +88,10 @@ function TimelineSideBar(props) {
 // Id: BlockContainer
 function TimelineBlockContainer(props) {
     const h = [
+        "12 AM","1 AM","2 AM","3 AM","4 AM","5 AM","6 AM",
         "7 AM","8 AM","9 AM","10 AM","11 AM","12 AM","1 PM","2 PM"
         ,"3 PM","4 PM","5 PM","6 PM","7 PM","8 PM","9 PM","10 PM",
-        "11 PM","12 AM","1 AM","2 AM","3 AM","4 AM","5 AM","6 AM"
+        "11 PM"
     ];
 
     let TimelineBlocks = [];
@@ -119,9 +137,10 @@ function TimelineBlockContainer(props) {
 // Id: HourBar
 function TimelineHourMarkerBar() {
     const h = [
+        "1 AM","2 AM","3 AM","4 AM","5 AM","6 AM",
         "7 AM","8 AM","9 AM","10 AM","11 AM","12 AM","1 PM","2 PM"
         ,"3 PM","4 PM","5 PM","6 PM","7 PM","8 PM","9 PM","10 PM",
-        "11 PM","12 AM","1 AM","2 AM","3 AM","4 AM","5 AM","6 AM"
+        "11 PM","12 AM"
     ];
 
     const helem = h.map((x, index) => <div className='Timeline-Marker' key={'tm' + index}>
